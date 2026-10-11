@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#172823" />
+    <meta name="description" content="Kuru: The Last Mile. A one-thumb survival delivery through a beautiful, slowly corrupted world." />
+    <title>KURU · The Last Mile</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script type="module" crossorigin src="./assets/index-7w_z3Y_g.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B-3PUoaS.css">
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="margin-note left-note" aria-hidden="true">
+        <div class="network-mark"><span class="mark">↗</span> THE COURIER NETWORK</div>
+        <div class="side-title">Some things<br />are still worth<br /><em>delivering.</em></div>
+        <div class="side-rule"></div>
+        <p>A parcel. A way through.<br />A little hope at the other end.</p>
+        <div class="side-coordinate">SECTOR 08 / 49° N<br /><span>EST. AFTER THE FALL</span></div>
+      </aside>
+
+      <section id="game-shell" class="game-shell" aria-label="Kuru survival delivery game">
+        <canvas id="world" aria-label="Isometric procedural game world"></canvas>
+        <div class="vignette"></div>
+        <div id="touch-layer" aria-label="Drag to move the courier"></div>
+
+        <div id="hud" class="hud hidden">
+          <header class="hud-top">
+            <div class="mini-brand">KURU<span>THE LAST MILE</span></div>
+            <div class="top-actions">
+              <button id="map-button" class="icon-button" aria-label="View delivery route" title="Delivery route"><svg viewBox="0 0 24 24"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2Z M9 3v16 M15 5v16" /></svg></button>
+              <button id="pause-button" class="icon-button" aria-label="Pause game" title="Pause"><svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14" /></svg></button>
+            </div>
+          </header>
+          <div class="vitals">
+            <div class="vital"><span class="vital-label"><i class="health-dot"></i> COURIER <b id="hp-value">100</b></span><div class="meter"><i id="hp-bar"></i></div></div>
+            <div class="vital"><span class="vital-label"><i class="cargo-dot"></i> PARCEL <b id="cargo-value">100%</b></span><div class="meter cargo-meter"><i id="cargo-bar"></i></div></div>
+          </div>
+          <div class="route-hud"><span class="route-marker">↗</span><div><b id="biome-name">District 08</b><span id="objective">Find the northern road</span></div><span id="leg-label">01 / 06</span></div>
+          <div class="route-progress"><i id="progress-bar"></i><span id="checkpoint-label">NEXT SAFEHOUSE · 6 MIN</span></div>
+          <div id="boss-hud" class="boss-hud hidden"><span id="boss-name">THE HOLLOW</span><div class="meter"><i id="boss-bar"></i></div></div>
+          <div id="encounter" class="encounter hidden"><span>!</span><b id="encounter-text"></b></div>
+          <div class="north-guide"><span>↑</span><small>FOLLOW THE ROAD</small></div>
+          <div id="toast" class="toast hidden" role="status"></div>
+          <div id="joystick" class="joystick"><div class="stick-ring"><i id="stick-knob"></i></div><span>DRAG TO MOVE</span></div>
+          <div class="combat-strip"><div class="weapon-symbol">⌁</div><div><b id="weapon-name">SIDEARM</b><span id="weapon-status"><i></i> AUTO SELECT · AUTO FIRE</span></div><span id="kills-value">0 <small>INFECTED</small></span></div>
+          <div id="buffs" class="buffs"></div>
+        </div>
+
+        <section id="intro" class="intro screen">
+          <div class="intro-top"><span class="network-mark"><span class="mark">↗</span> THE COURIER NETWORK</span><span class="edition">FIELD NOTES / 001</span></div>
+          <div class="intro-title"><span class="eyebrow">KEEP THE CONNECTION ALIVE</span><h1>KURU<span>THE LAST MILE</span></h1></div>
+          <div class="dispatch-panel">
+            <div class="dispatch-heading"><span class="live-dot"></span> DISPATCH 001 <span>MEDICAL SUPPLIES</span></div>
+            <h2>The world went quiet.<br />The deliveries didn’t.</h2>
+            <div class="delivery-path"><div><small>DEPARTURE</small><b>District 08</b></div><span>⟶</span><div><small>DESTINATION</small><b>The Lantern</b></div></div>
+            <div class="mode-choice" role="group" aria-label="Delivery duration"><button id="journey-mode" class="selected" aria-pressed="true">THE JOURNEY <span>30–36 min · 6 safehouses</span></button><button id="express-mode" aria-pressed="false">FIELD TEST <span>5–7 min · same encounters</span></button></div>
+            <button id="begin-button" class="primary-button">BEGIN DELIVERY <span>↗</span></button>
+            <button id="resume-button" class="text-button hidden">RESUME SAVED DELIVERY <span>→</span></button>
+            <p id="save-notice" class="save-notice hidden" role="status"></p>
+            <p class="control-note"><span class="thumb-icon">◎</span> One thumb to move. We’ll handle the shooting.</p>
+            <button id="intro-guide" class="text-button subtle">COURIER’S FIELD GUIDE <span>+</span></button>
+          </div>
+        </section>
+
+        <section id="modal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="modal-title">
+          <div class="modal-panel"><span id="modal-eyebrow" class="eyebrow"></span><h2 id="modal-title"></h2><div id="modal-content"></div><div id="modal-actions"></div></div>
+        </section>
+        <div id="boot" class="boot"><span class="boot-mark">↗</span><b>FINDING A WAY THROUGH</b><span>Preparing your route…</span></div>
+        <div id="damage-flash" class="damage-flash"></div>
+      </section>
+
+      <aside class="margin-note right-note" aria-hidden="true">
+        <span class="eyebrow">A WORLD BETWEEN</span>
+        <ol class="side-biomes"><li><span>01</span> CONCRETE & ROOTS</li><li><span>02</span> THE GREEN SILENCE</li><li><span>03</span> FORGOTTEN PLACES</li><li><span>04</span> WHERE LAND ENDS</li><li><span>05</span> DUST & DISTANCE</li><li><span>06</span> A LIGHT AHEAD</li></ol>
+        <div class="parcel-stamp"><svg viewBox="0 0 64 64"><path d="m12 19 20-9 20 9v27l-20 9-20-9Z M12 19l20 9 20-9 M32 28v27 M22 14l20 9v10" /></svg><span>HANDLE WITH HOPE</span></div>
+        <p>Move with a mouse or WASD.<br />On your phone, just a thumb.</p>
+        <span class="prototype-tag">PLAYABLE FIELD BUILD · V0.1</span>
+      </aside>
+    </main>
+  </body>
+</html>
