@@ -7,8 +7,8 @@
     <meta name="description" content="Kuru: The Last Mile. A one-thumb survival delivery through a beautiful, slowly corrupted world." />
     <title>KURU · The Last Mile</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <script type="module" crossorigin src="./assets/index-D_tWfBr8.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-7yiBJbZS.css">
+    <script type="module" crossorigin src="./assets/index-D0hKmxOz.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-iYxwq8NV.css">
   </head>
   <body>
     <main class="layout">
@@ -38,15 +38,18 @@
             <div class="vital"><span class="vital-label"><i class="cargo-dot"></i> PARCEL <em id="cargo-warn" class="hidden">FRAGILE</em> <b id="cargo-value">100%</b></span><div class="meter cargo-meter"><i id="cargo-bar"></i></div></div>
           </div>
           <div class="route-hud"><span id="beacon-arrow" class="route-marker" title="Direction of the next safehouse" aria-label="Direction of the next safehouse">↑</span><div><b id="biome-name">To Northgate refuge</b><span class="route-sub"><i id="biome-tag" class="biome-tag">District 08</i><span id="objective">Follow the road</span></span></div><span id="leg-label">01 / 06</span><div id="buffs" class="buffs"></div></div>
-          <div class="route-progress"><i id="progress-bar"></i><span id="checkpoint-label">NEXT SAFEHOUSE · 6 MIN</span></div>
-          <div class="notices">
+          <div class="route-row">
+            <div class="route-progress"><i id="progress-bar"></i><span id="checkpoint-label">NEXT SAFEHOUSE · 6 MIN</span></div>
             <div id="boss-hud" class="boss-hud hidden"><span id="boss-name">THE HOLLOW</span><div class="meter"><i id="boss-bar"></i></div></div>
-            <div id="encounter" class="encounter hidden"><span>!</span><b id="encounter-text"></b></div>
+            <div id="weapon-bar" class="weapon-bar" role="group" aria-label="Weapons carried"></div>
+          </div>
+          <div class="notices">
+            <div id="encounter" class="encounter hidden" role="alert"><span>!</span><b id="encounter-text"></b></div>
             <div id="toast" class="toast hidden" role="status"></div>
           </div>
           <div id="beacon-edge" class="beacon-edge hidden" aria-hidden="true"><span id="beacon-edge-arrow">↑</span><small id="beacon-edge-label"></small></div>
           <div id="joystick" class="joystick"><div class="stick-ring"><i id="stick-knob"></i></div><span>DRAG TO MOVE</span></div>
-          <div class="combat-strip"><div class="weapon-symbol">⌁</div><div><b id="weapon-name">SIDEARM</b><span id="weapon-status"><i></i> AUTO SELECT · AUTO FIRE</span></div><span id="kills-value">0 <small>INFECTED</small></span></div>
+          <div class="combat-strip"><span id="kills-value">0 <small>INFECTED</small></span></div>
         </div>
 
         <section id="intro" class="intro screen">
@@ -70,6 +73,7 @@
         </section>
         <div id="boot" class="boot"><span class="boot-mark">↗</span><b>FINDING A WAY THROUGH</b><span>Preparing your route…</span></div>
         <div id="damage-flash" class="damage-flash"></div>
+        <div id="fx-layer" class="fx-layer" aria-hidden="true"></div>
       </section>
 
       <aside class="margin-note right-note" aria-hidden="true">
