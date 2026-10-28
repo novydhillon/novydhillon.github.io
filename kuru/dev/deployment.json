@@ -1,5 +1,6 @@
 {
-  "sourceCommit": "fc22b69ff55f588cc53c4cbb87bc4dfbd518fa6e",
+  "sourceCommit": "65fb175f8d74191316cc3b1fba3dd1743c5e9baa",
   "sourceBranch": "dev/kuru_route_combat_overhaul",
-  "deployedAt": "2026-10-28T00:15:35Z"
+  "build": "build:dev (QA on)",
+  "deployedAt": "2026-10-28T01:09:09Z"
 }
