@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "08dbcde1e6e9334b8df643280fbc5901e87f9410",
+  "target": "dev",
+  "sourceCommit": "bd44e0e4e632326ee2f1e165b8ea84eba438ddc7",
   "sourceBranch": "dev/post-apocalyptic-art",
-  "build": "build:dev (QA on)",
-  "deployedAt": "2026-10-29T21:37:00Z"
+  "deployedAt": "2026-10-29T23:08:31.794Z"
 }
