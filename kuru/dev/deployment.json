@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "65fb175f8d74191316cc3b1fba3dd1743c5e9baa",
-  "sourceBranch": "dev/kuru_route_combat_overhaul",
+  "sourceCommit": "08dbcde1e6e9334b8df643280fbc5901e87f9410",
+  "sourceBranch": "dev/post-apocalyptic-art",
   "build": "build:dev (QA on)",
-  "deployedAt": "2026-10-28T01:09:09Z"
+  "deployedAt": "2026-10-29T21:37:00Z"
 }

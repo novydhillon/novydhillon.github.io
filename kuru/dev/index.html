@@ -7,8 +7,8 @@
     <meta name="description" content="Kuru: The Last Mile. A one-thumb survival delivery through a beautiful, slowly corrupted world." />
     <title>KURU · The Last Mile</title>
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <script type="module" crossorigin src="./assets/index-BmWqos-q.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-iYxwq8NV.css">
+    <script type="module" crossorigin src="./assets/index-B0AE8SZ0.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CJAjjpWD.css">
   </head>
   <body>
     <main class="layout">
@@ -44,12 +44,14 @@
             <div id="weapon-bar" class="weapon-bar" role="group" aria-label="Weapons carried"></div>
           </div>
           <div class="notices">
+            <div id="range-chip" class="range-chip hidden" role="status">OUT OF RANGE · CLOSE IN</div>
             <div id="encounter" class="encounter hidden" role="alert"><span>!</span><b id="encounter-text"></b></div>
             <div id="toast" class="toast hidden" role="status"></div>
           </div>
+          <div id="route-trail" class="route-trail" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
           <div id="beacon-edge" class="beacon-edge hidden" aria-hidden="true"><span id="beacon-edge-arrow">↑</span><small id="beacon-edge-label"></small></div>
           <div id="joystick" class="joystick"><div class="stick-ring"><i id="stick-knob"></i></div><span>DRAG TO MOVE</span></div>
-          <div class="combat-strip"><span id="kills-value">0 <small>INFECTED</small></span></div>
+          <div class="combat-strip"><span id="kills-value">0 <small>CLEARED</small></span></div>
         </div>
 
         <section id="intro" class="intro screen">
@@ -73,6 +75,7 @@
         </section>
         <div id="boot" class="boot"><span class="boot-mark">↗</span><b>FINDING A WAY THROUGH</b><span>Preparing your route…</span></div>
         <div id="damage-flash" class="damage-flash"></div>
+        <div id="hit-arc" class="hit-arc" aria-hidden="true"></div>
         <div id="fx-layer" class="fx-layer" aria-hidden="true"></div>
       </section>
 
