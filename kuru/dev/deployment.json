@@ -1,6 +1,6 @@
 {
-  "target": "dev",
-  "sourceCommit": "bd44e0e4e632326ee2f1e165b8ea84eba438ddc7",
-  "sourceBranch": "dev/post-apocalyptic-art",
-  "deployedAt": "2026-10-29T23:08:31.794Z"
+  "sourceCommit": "3a88a49dbe6209cb599d07449685a6c0de127ca8",
+  "sourceBranch": "dev/perf-bake",
+  "build": "build:dev (QA on)",
+  "deployedAt": "2026-11-03T23:56:14.764Z"
 }
