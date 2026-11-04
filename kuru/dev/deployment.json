@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "3a88a49dbe6209cb599d07449685a6c0de127ca8",
-  "sourceBranch": "dev/perf-bake",
+  "sourceCommit": "54785a51aee9f9add0ad2c0bc6a506466f83369d",
+  "sourceBranch": "dev/weapon-pickups",
   "build": "build:dev (QA on)",
-  "deployedAt": "2026-11-03T23:56:14.764Z"
+  "deployedAt": "2026-11-04T02:35:34.058Z"
 }
