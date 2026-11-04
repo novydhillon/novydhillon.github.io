@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "54785a51aee9f9add0ad2c0bc6a506466f83369d",
+  "sourceCommit": "38ae34c498e20a2e6abfae6756af88444b50ed0e",
   "sourceBranch": "dev/weapon-pickups",
   "build": "build:dev (QA on)",
-  "deployedAt": "2026-11-04T02:35:34.058Z"
+  "deployedAt": "2026-11-04T04:31:55.285Z"
 }
