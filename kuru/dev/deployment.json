@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "38ae34c498e20a2e6abfae6756af88444b50ed0e",
-  "sourceBranch": "dev/weapon-pickups",
+  "sourceCommit": "d2768c0f284db27ecbec223ef50de898dbdee353",
+  "sourceBranch": "dev/pretty-js",
   "build": "build:dev (QA on)",
-  "deployedAt": "2026-11-04T04:31:55.285Z"
+  "deployedAt": "2026-11-07T00:16:16.302Z"
 }
