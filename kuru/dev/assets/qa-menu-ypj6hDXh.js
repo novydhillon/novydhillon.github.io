@@ -1,4 +1,4 @@
-import { W as WEAPON_SLOTS, a as WEAPONS, S as SHIELD_CAP, B as BUFF_TIME } from "./index-CLZ3UvqY.js";
+import { W as WEAPON_SLOTS, a as WEAPONS, S as SHIELD_CAP, B as BUFF_TIME } from "./index-C8RO8KRP.js";
 const BUFFS = [
   ["rapid", "RAPID FIRE", "≋", "#efa840"],
   ["power", "OVERCHARGE", "ϟ", "#aa78ee"],
